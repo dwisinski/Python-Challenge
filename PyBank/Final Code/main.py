@@ -23,7 +23,7 @@ with open(budget_data, "r", encoding='utf8') as csvfile:
     # iterate through all rows in csv file
     for row in csvreader:
         # count number of months in data
-        total_months = total_months + 1
+        total_months +=1
 
         # set profits as integer value of row in column[1]
         profits = int(row[1])
@@ -50,7 +50,7 @@ with open(budget_data, "r", encoding='utf8') as csvfile:
             min_change = profits_change
             min_month = row[0]
 
-    # remove first object from list (no change)
+    # remove first object from change list (no change)
     change.pop(0)
 
     # calculate sum total of change list values
@@ -72,12 +72,12 @@ with open(budget_data, "r", encoding='utf8') as csvfile:
 output_file = os.path.join("..", "Analysis", "final_output.txt")
 
 # print output as data to txt file
-with open(output_file, "w", encoding='utf8') as datafile:
-    datafile.write(f"Financial Analysis:\n")
-    datafile.write("----------------------------\n")
-    datafile.write(f"Total Months: {total_months}\n")
-    datafile.write(f"Total Profits: $ {total_profits}\n")
-    datafile.write(f"Average Change: $ {avg_change}\n")
-    datafile.write(f"Greatest Increase in Profits: {max_month} $ {max_change}\n")
-    datafile.write(f"Greatest Decrease in Profits: {min_month} $ {min_change}\n")
-    datafile.close()
+with open(output_file, "w", encoding='utf8') as textfile:
+    textfile.write(f"Financial Analysis:\n")
+    textfile.write("----------------------------\n")
+    textfile.write(f"Total Months: {total_months}\n")
+    textfile.write(f"Total Profits: $ {total_profits}\n")
+    textfile.write(f"Average Change: $ {avg_change}\n")
+    textfile.write(f"Greatest Increase in Profits: {max_month} $ {max_change}\n")
+    textfile.write(f"Greatest Decrease in Profits: {min_month} $ {min_change}\n")
+    textfile.close()
