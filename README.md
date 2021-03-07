@@ -6,7 +6,7 @@ March 2021
 ## Project: Python Homework - PyBank and PyPoll
 
 ## Description:
-This project was created to demonstrate a number Python scripting concepts on test data sets of financial records data (PyBank) and local election data (PyPoll). Concepts covered include: importing/reading .csv files, storing data in variables, creating and modifying lists and dictionaries, iterating through data sets, writing to output files, etc.
+This project was created to demonstrate a number of Python scripting concepts on test data sets of financial records data (PyBank) and local election data (PyPoll). Concepts covered include: importing/reading .csv files, storing data in variables, creating and modifying lists and dictionaries, iterating through data sets, using functions, writing to output files, etc.
 
 ## Notes:
 Each exercise contains its own set of folders for:
@@ -15,4 +15,4 @@ Each exercise contains its own set of folders for:
 - Resources (the respective data set operated on).
 
 ## **Important Usage Notes:**
-The script files reference the respective data files in Resources as a relative path.
+The script files reference the respective data files in Resources using their relative paths.
